@@ -12,7 +12,8 @@ import Project from "./components/Project";
 import Footer from "commons/Footer/Footer";
 import MyStack from "./components/Mystack";
 import img1 from "assets/imgs/projectSabujcha.png";
-import img2 from "assets/imgs/projectNetflix.png";
+import img3 from "assets/imgs/projectNetflix.png";
+import img2 from "assets/imgs/projectSimply.png"
 
 function Home() {
   return (
@@ -22,8 +23,9 @@ function Home() {
         <Hero />
       </MKBox>
       <MKBox sx={{ padding: "0 5rem" }} margin={2}>
-        <Project title="Sabujcha" description="el piza sabe" tags={["Front End", "React", "HTML", "CSS"]} imgSrc={img1} latestWork={true} linkTo="/project-sabujcha"/>
-        <Project title="Netflix Clone" description="el piza sabe" tags={["Front End", "React", "HTML", "CSS"]} imgSrc={img2} linkTo="/project-netflix"/>
+        <Project title="Sabujcha" description="el piza sabe" tags={["Front End", "HTML", "CSS", "React" ]} imgSrc={img1} latestWork={true} linkTo="/project-sabujcha"/>
+        <Project title="Simply Recipes" description="el piza sabe" tags={["Front End", "HTML", "CSS", "React", "Gatsby" ]} imgSrc={img2} linkTo="/project-simply"/>
+        <Project title="Netflix Clone" description="el piza sabe" tags={["Front End", "HTML", "CSS", "React" ]} imgSrc={img3} linkTo="/project-netflix"/>
         <MyStack />
       </MKBox>
       <Footer />
