@@ -4,9 +4,9 @@ import { Grid } from "@mui/material";
 import MKTypography from "components/MKTypography";
 import { Link } from "react-router-dom";
 
-import GitHubIcon from '@mui/icons-material/GitHub';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import LightModeIcon from '@mui/icons-material/LightMode';
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import LightModeIcon from "@mui/icons-material/LightMode";
 
 const Navbar = () => {
   return (
@@ -29,7 +29,7 @@ const Navbar = () => {
         >
           my work
         </MKTypography>
-        <MKTypography
+        {/* <MKTypography
           variant="h5"
           marginLeft={2}
           sx={{
@@ -38,13 +38,21 @@ const Navbar = () => {
           }}
         >
           get in touch
-        </MKTypography>
+        </MKTypography> */}
       </Grid>
       <Grid item display="flex">
-        <a target="_blank" href='https://github.com/MatPizzolo'><GitHubIcon fontSize="medium" color="black"/></a>
-        <a target="_blank" href='https://www.linkedin.com/in/mateo-pizzolo'><LinkedInIcon fontSize="medium" color="black" sx={{marginLeft: 2, marginRight: 2}}/></a>
-        <div style={{backgroundColor: "black", height: "1rem", width: "1px", margin: "auto"}}/>
-        <LightModeIcon fontSize="medium" color="black" sx={{marginLeft: 2}}/>
+        <a target="_blank" href="https://github.com/MatPizzolo">
+          <GitHubIcon fontSize="medium" color="black" />
+        </a>
+        <a target="_blank" href="https://www.linkedin.com/in/mateo-pizzolo">
+          <LinkedInIcon
+            fontSize="medium"
+            color="black"
+            sx={{ marginLeft: 2 }}
+          />
+        </a>
+        {/* <div style={{backgroundColor: "black", height: "1rem", width: "1px", margin: "auto"}}/>
+        <LightModeIcon fontSize="medium" color="black" sx={{marginLeft: 2}}/> */}
       </Grid>
     </Grid>
   );

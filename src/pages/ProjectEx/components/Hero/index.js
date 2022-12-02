@@ -2,9 +2,8 @@ import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 import React from "react";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
-import { Link } from "react-router-dom";
 
-const Hero = () => {
+const Hero = ({title, description, pageLink, repoLink}) => {
   return (
     <>
       <MKBox
@@ -15,21 +14,30 @@ const Hero = () => {
         marginLeft="auto"
         marginRight="auto"
       >
-        <MKTypography
-          variant="h6"
-          textTransform="uppercase"
-          color="rgba(0, 0, 0, 0.35)"
-        >
-          project showcase
-        </MKTypography>
         <MKTypography variant="h1" textTransform="capitalize" my={3}>
-          project title
+          {title}
         </MKTypography>
-        <MKTypography variant="h4">
-          This is a homepage design and build for a concept project – a chat
-          application. I have designed the page first then later built a
-          responsive page in Webflow.
-        </MKTypography>
+        {/* <MKTypography variant="h4">
+          {description}
+        </MKTypography> */}
+        <MKBox display="flex" justifyContent="center" mt={6}>
+          <MKTypography
+            variant="h4"
+            sx={{
+              marginRight: "1rem",
+              fontWeight: "600",
+              background: " linear-gradient(0, #A8B4FF 50%, transparent 50%)",
+              cursor: "pointer",
+            }}
+          >
+            <a target="_blank" href={pageLink} style={{color: "black", textDecoration: "none"}}>Visit live site</a>
+          </MKTypography>
+          <ArrowRightAltIcon
+            alignItem="center"
+            sx={{ marginTop: "auto" }}
+            fontSize="medium"
+          />
+        </MKBox>
         <MKBox display="flex" justifyContent="center" mt={3}>
           <MKTypography
             variant="h4"
@@ -40,7 +48,7 @@ const Hero = () => {
               cursor: "pointer",
             }}
           >
-            <a target="_blank" href='http://www.google.com' style={{color: "black", textDecoration: "none"}}>Visit live site</a>
+            <a target="_blank" href={repoLink} style={{color: "black", textDecoration: "none", whiteSpace: "nowrap"}}>Visit Repository</a>
           </MKTypography>
           <ArrowRightAltIcon
             alignItem="center"

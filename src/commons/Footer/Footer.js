@@ -9,19 +9,23 @@ const Footer = () => {
       <MKBox
         bgColor="#EAECF9"
         margin={2}
-        sx={{ padding: "5rem 5rem 10rem 5rem" }}
         display="flex"
         justifyContent="space-between"
         marginTop={20}
+        sx={{
+          padding: { xs: "2rem", md: "5rem" },
+          flexDirection: { xs: "column", md: "row" },
+          textAlign: {xs: "center", md: "left"},
+        }}
       >
-        <MKTypography width="50%" variant="h1">
+        <MKTypography variant="h2" sx={{ width: { xs: "100%", md: "50%" } }}>
           Want to work?
         </MKTypography>
         {/* <MKTypography variant="p">
               All rights reserved
             </MKTypography> */}
 
-        <MKTypography width="50%" variant="h4">
+        <MKTypography variant="h5" sx={{ width: { xs: "100%", md: "50%" }, marginTop: {xs: "2rem", md: 0} }}>
           If you need a modern and powerful website for your business, startup
           or personally, I am available for work. You can email me directly at
           matpizzolo@gmail.com.
