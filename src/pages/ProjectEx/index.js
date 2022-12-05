@@ -3,7 +3,6 @@ import MKBox from "components/MKBox";
 import Navbar from "commons/Navbar";
 import Hero from "./components/Hero";
 import Footer from "commons/Footer/Footer";
-import pageimg from "assets/imgs/sabujcha-screenshot.png";
 
 const ProjectPage = ({ title, description, image, pageLink, repoLink }) => {
   return (
