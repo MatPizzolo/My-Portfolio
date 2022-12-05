@@ -37,7 +37,12 @@ const Hero = () => {
               backgroundColor: "#EAECF9",
             }}
           />
-          <MKButton color="black" sx={{ width: "200px", height: "60px" }}>
+          <MKButton
+            color="black"
+            sx={{ width: "200px", height: "60px" }}
+            href="https://drive.google.com/file/d/1h1rtudmUM_48RZIhLYVJeErNy40YFxUF/view?usp=share_link"
+            target="_blank"
+          >
             Resume
           </MKButton>
         </div>
