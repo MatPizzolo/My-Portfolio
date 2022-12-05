@@ -29,6 +29,8 @@ const Project = ({ title, description, tags, imgSrc, linkTo }) => {
             whiteSpace="nowrap"
             mb={2}
             sx={{ justifyContent: { xs: "center", md: "none" } }}
+            flexWrap="wrap"
+            gap="1rem 0"
           >
             {tags.map((tag) => {
               return (

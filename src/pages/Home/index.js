@@ -20,12 +20,12 @@ function Home() {
       <MKBox
         margin={2}
         bgColor="#EAECF9"
-        sx={{ padding: { xs: "0 2rem", md: "0 5rem" } }}
+        sx={{ padding: { xs: "0 1rem", sm: "0 2rem", md: "0 5rem" } }}
       >
         <Navbar />
         <Hero />
       </MKBox>
-      <MKBox sx={{ padding: { xs: "0 2rem", md: "0 5rem" } }} margin={2}>
+      <MKBox sx={{ padding: { xs: "0 1rem", sm: "0 2rem", md: "0 5rem" } }} margin={2}>
         {projectsInfo.map((project) => {
         console.log(project)
 
