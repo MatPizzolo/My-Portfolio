@@ -18,12 +18,11 @@ const Hero = () => {
         }}
       >
         <MKTypography variant="h1">
-          Hi, I´m Mateo, <br /> Full Stack Developer
+          Hi, I´m Mateo, <br /> Front End Developer
         </MKTypography>
         <MKTypography variant="h4" marginTop={1.5} marginBottom={2.5}>
-          I design and build beautiful websites and apps for businesses around
-          the globe. If you need a modern and powerful website, send me an
-          email. If we are a good fit, I will give you a time and cost estimate.
+          I build beautiful websites and apps for businesses around
+          the globe.
         </MKTypography>
         <div style={{ position: "relative" }}>
           <MKButton
