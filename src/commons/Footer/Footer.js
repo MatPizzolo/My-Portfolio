@@ -27,7 +27,7 @@ const Footer = () => {
 
         <MKTypography variant="h5" sx={{ width: { xs: "100%", md: "50%" }, marginTop: {xs: "2rem", md: 0} }}>
           You can email me directly at
-          matpizzolo@gmail.com.
+          matpizzolo@gmail.com
         </MKTypography>
       </MKBox>
     </>
