@@ -39,7 +39,7 @@ const Hero = () => {
           <MKButton
             color="black"
             sx={{ width: "200px", height: "60px" }}
-            href="https://drive.google.com/file/d/1h1rtudmUM_48RZIhLYVJeErNy40YFxUF/view?usp=share_link"
+            href="https://drive.google.com/file/d/1mMkB3kr_ogGk8_D8zWABNHOir5J5UwEB/view?usp=sharing"
             target="_blank"
           >
             Resume
