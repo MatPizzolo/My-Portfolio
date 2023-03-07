@@ -24,7 +24,7 @@
     <br />
     <br />
     <br />
-    <a href="https://playful-queijadas-f8caa0.netlify.app" target="_blank">View Web App</a>
+    <a href="http://www.mateopizzolo.com" target="_blank">View Web App</a>
   </p>
 </div>
 
