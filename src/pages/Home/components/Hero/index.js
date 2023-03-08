@@ -3,48 +3,28 @@ import React from "react";
 import { Grid } from "@mui/material";
 import MKTypography from "components/MKTypography";
 import MKButton from "components/MKButton";
+import ButtonMp from "commons/ButtonMp";
 
 const Hero = () => {
   return (
     <>
       <Grid
-        paddingBottom="15vh"
+        py="5vh"
         display="flex"
         flexDirection="column"
         sx={{
           maxWidth: { xs: "80%", lg: "50%" },
           textAlign: { xs: "center", md: "left" },
-          margin: { xs: "15vh auto auto auto", md: "15vh auto 0 0" },
+          margin: { xs: "auto", md: "15vh auto 0 0" },
         }}
       >
         <MKTypography variant="h1">
           Hi, I´m Mateo, <br /> Front End Developer
         </MKTypography>
         <MKTypography variant="h4" marginTop={1.5} marginBottom={2.5}>
-          I build beautiful websites and apps for businesses around
-          the globe.
+          I build beautiful websites and apps for businesses around the globe.
         </MKTypography>
-        <div style={{ position: "relative" }}>
-          <MKButton
-            sx={{
-              width: "200px",
-              height: "60px",
-              border: "2px solid black",
-              position: "absolute",
-              top: 15,
-              left: 15,
-              backgroundColor: "#EAECF9",
-            }}
-          />
-          <MKButton
-            color="black"
-            sx={{ width: "200px", height: "60px" }}
-            href="https://drive.google.com/file/d/1mMkB3kr_ogGk8_D8zWABNHOir5J5UwEB/view?usp=sharing"
-            target="_blank"
-          >
-            Resume
-          </MKButton>
-        </div>
+        <ButtonMp title="RESUME" linkRef="https://drive.google.com/file/d/1mMkB3kr_ogGk8_D8zWABNHOir5J5UwEB/view?usp=sharing" />
       </Grid>
       <div style={{ display: "flex", justifyContent: "space-between" }}>
         <div />

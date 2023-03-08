@@ -1,18 +1,27 @@
 import MKBox from "components/MKBox";
+import { Grid } from "@mui/material";
 import MKTypography from "components/MKTypography";
 import MKButton from "components/MKButton";
 import React from "react";
+import ButtonMp from "commons/ButtonMp";
 
 const Project = ({ title, description, tags, imgSrc, linkTo }) => {
   return (
-    <MKBox
+    <Grid
+      container
+      spacing={2}
       marginTop={20}
       display="flex"
       justifyContent="space-between"
       sx={{ flexDirection: { xs: "column", md: "row" } }}
     >
-      <MKBox sx={{ textAlign: { xs: "center", md: "left" } }}>
-        <div style={{ maxWidth: { xs: "100%", md: "70%" } }}>
+      <Grid
+        item
+        xs={12}
+        md={6}
+        sx={{ textAlign: { xs: "center", md: "left" } }}
+      >
+        <div style={{ maxWidth: { xs: "100%" } }}>
           {/* {latestWork ? (
             <MKTypography variant="h5" mb={2}>
               Latest work
@@ -28,7 +37,7 @@ const Project = ({ title, description, tags, imgSrc, linkTo }) => {
             flexDirection="row"
             whiteSpace="nowrap"
             mb={2}
-            sx={{ justifyContent: { xs: "center", md: "none" } }}
+            sx={{ justifyContent: { xs: "center", md: "left" } }}
             flexWrap="wrap"
             gap="1rem 0"
           >
@@ -45,29 +54,19 @@ const Project = ({ title, description, tags, imgSrc, linkTo }) => {
           <MKTypography variant="h5" mb={5}>
             {description}
           </MKTypography>
-          <div style={{ position: "relative" }}>
-            <MKButton
-              sx={{
-                width: "200px",
-                height: "60px",
-                border: "2px solid black",
-                position: "absolute",
-                top: 15,
-                left: 15,
-                backgroundColor: "#EAECF9",
-              }}
-            />
-            <MKButton
-              href={linkTo}
-              color="black"
-              sx={{ width: "200px", height: "60px" }}
-            >
-              see this project
-            </MKButton>
-          </div>
+          <ButtonMp title="see this project" linkRef={linkTo} />
         </div>
-      </MKBox>
-      <MKBox sx={{ textAlign: { xs: "center", md: 0 } }}>
+      </Grid>
+      <Grid
+        item
+        xs={12}
+        md={6}
+        sx={{
+          textAlign: { xs: "center", },
+          display: "flex",
+          alignItems: "center",
+        }}
+      >
         <MKBox
           component="img"
           src={imgSrc}
@@ -75,11 +74,14 @@ const Project = ({ title, description, tags, imgSrc, linkTo }) => {
             height: "100%",
             maxWidth: "100%",
             marginTop: { xs: "5vh", md: 0 },
-            objectFit: "cover"
+            objectFit: "cover",
+            height: "auto",
+            width: "auto",
+            mx: { xs: "auto", md: 0 }
           }}
         />
-      </MKBox>
-    </MKBox>
+      </Grid>
+    </Grid>
   );
 };
 

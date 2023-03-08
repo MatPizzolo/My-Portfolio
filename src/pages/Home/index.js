@@ -25,20 +25,24 @@ function Home() {
         <Navbar />
         <Hero />
       </MKBox>
-      <MKBox sx={{ padding: { xs: "0 1rem", sm: "0 2rem", md: "0 5rem" } }} margin={2}>
+      <MKBox
+        sx={{ padding: { xs: "0 1rem", sm: "0 2rem", md: "0 5rem" } }}
+        margin={2}
+      >
         {projectsInfo.map((project) => {
-        console.log(project)
+          console.log(project);
 
           return (
-          <Project
-          title={project.title}
-          description={project.description}
-          imgSrc={project.previewImage}
-          linkTo={project.route}
-          tags={project.tags}
-        />
-          )})}
-        
+            <Project
+              title={project.title}
+              description={project.description}
+              imgSrc={project.previewImage}
+              linkTo={project.route}
+              tags={project.tags}
+            />
+          );
+        })}
+
         <MyStack />
       </MKBox>
       <Footer />
