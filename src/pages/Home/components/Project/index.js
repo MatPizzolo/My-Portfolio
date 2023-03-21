@@ -4,8 +4,9 @@ import MKTypography from "components/MKTypography";
 import MKButton from "components/MKButton";
 import React from "react";
 import ButtonMp from "commons/ButtonMp";
+import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 
-const Project = ({ title, description, tags, imgSrc, linkTo }) => {
+const Project = ({ title, description, tags, imgSrc, linkTo, pageLink, repoLink }) => {
   return (
     <Grid
       container
@@ -42,19 +43,65 @@ const Project = ({ title, description, tags, imgSrc, linkTo }) => {
             gap="1rem 0"
           >
             {tags.map((tag) => {
-              return (
-                <MKBox mr={1} bgColor="#A8B4FF">
-                  <MKTypography variant="h5" m={0.5}>
-                    {tag}
-                  </MKTypography>
-                </MKBox>
-              );
+              return <MKBox mr={1}>{tag}</MKBox>;
             })}
           </MKBox>
-          <MKTypography variant="h5" mb={5}>
+          <MKTypography variant="h5">
             {description}
           </MKTypography>
-          <ButtonMp title="see this project" linkRef={linkTo} />
+          <MKBox display="flex" justifyContent="center" mt={2}>
+            <MKTypography
+              variant="h5"
+              sx={{
+                marginRight: "1rem",
+                fontWeight: "500",
+                background: " linear-gradient(0, #A8B4FF 50%, transparent 50%)",
+                cursor: "pointer",
+              }}
+            >
+              <a
+                target="_blank"
+                href={pageLink}
+                style={{ color: "black", textDecoration: "none" }}
+              >
+                Visit live site
+              </a>
+            </MKTypography>
+            <ArrowRightAltIcon
+              alignItem="center"
+              sx={{ marginTop: "auto" }}
+              fontSize="medium"
+            />
+          </MKBox>
+          <MKBox display="flex" justifyContent="center" mt={3}>
+            <MKTypography
+              variant="h5"
+              sx={{
+                marginRight: "1rem",
+                fontWeight: "500",
+                background: " linear-gradient(0, #A8B4FF 50%, transparent 50%)",
+                cursor: "pointer",
+              }}
+            >
+              <a
+                target="_blank"
+                href={repoLink}
+                style={{
+                  color: "black",
+                  textDecoration: "none",
+                  whiteSpace: "nowrap",
+                }}
+              >
+                Visit Repository
+              </a>
+            </MKTypography>
+            <ArrowRightAltIcon
+              alignItem="center"
+              sx={{ marginTop: "auto" }}
+              fontSize="medium"
+            />
+          </MKBox>
+          {/* <ButtonMp title="see this project" linkRef={linkTo} /> */}
         </div>
       </Grid>
       <Grid
@@ -62,7 +109,7 @@ const Project = ({ title, description, tags, imgSrc, linkTo }) => {
         xs={12}
         md={6}
         sx={{
-          textAlign: { xs: "center", },
+          textAlign: { xs: "center" },
           display: "flex",
           alignItems: "center",
         }}
@@ -77,7 +124,7 @@ const Project = ({ title, description, tags, imgSrc, linkTo }) => {
             objectFit: "cover",
             height: "auto",
             width: "auto",
-            mx: { xs: "auto", md: 0 }
+            mx: { xs: "auto", md: 0 },
           }}
         />
       </Grid>

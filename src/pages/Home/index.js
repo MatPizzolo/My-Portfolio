@@ -30,8 +30,6 @@ function Home() {
         margin={2}
       >
         {projectsInfo.map((project) => {
-          console.log(project);
-
           return (
             <Project
               title={project.title}
@@ -39,6 +37,8 @@ function Home() {
               imgSrc={project.previewImage}
               linkTo={project.route}
               tags={project.tags}
+              pageLink={project.pageLink}
+              repoLink={project.repoLink}
             />
           );
         })}
