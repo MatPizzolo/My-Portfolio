@@ -29,7 +29,7 @@ const { black } = colors;
 
 const baseProperties = {
   fontFamily: '"Mulish", sans-serif',
-  fontFamily2: '"Abril Fatface",',
+  fontFamily2: '"Inter", sans-serif',
   fontWeightLighter: 100,
   fontWeightLight: 300,
   fontWeightRegular: 400,

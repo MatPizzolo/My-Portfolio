@@ -18,10 +18,10 @@ const Hero = () => {
           margin: { xs: "auto", md: "15vh auto 0 0" },
         }}
       >
-        <MKTypography sx={{ typography: {xs: "h2", md: "h1"}, fontFamily: "Abril Fatface"}}>
+        <MKTypography sx={{ typography: {xs: "h3", md: "h1"}}}>
           Hi, I´m Mateo, <br /> Front End Developer
         </MKTypography>
-        <MKTypography variant="h4" marginTop={1.5} marginBottom={2.5}>
+        <MKTypography sx={{ typography: {xs: "h5", md: "h4"}}} marginTop={1.5} marginBottom={2.5}>
           I build beautiful websites and apps for businesses around the globe.
         </MKTypography>
         <ButtonMp title="RESUME" linkRef="https://drive.google.com/file/d/1FiO63IWTp7uHdoRGNuUHjRsbYfTreWIo/view?usp=share_link" />
