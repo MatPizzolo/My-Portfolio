@@ -46,10 +46,10 @@ const Project = ({ title, description, tags, imgSrc, linkTo, pageLink, repoLink 
               return <MKBox mr={1}>{tag}</MKBox>;
             })}
           </MKBox>
-          <MKTypography variant="h5">
+          {/* <MKTypography variant="h5">
             {description}
-          </MKTypography>
-          <MKBox display="flex" justifyContent="center" mt={2}>
+          </MKTypography> */}
+          <MKBox display="flex" mt={2} sx={{ justifyContent: {xs: "center", md: "left"}}}>
             <MKTypography
               variant="h5"
               sx={{
@@ -73,7 +73,7 @@ const Project = ({ title, description, tags, imgSrc, linkTo, pageLink, repoLink 
               fontSize="medium"
             />
           </MKBox>
-          <MKBox display="flex" justifyContent="center" mt={3}>
+          <MKBox display="flex" mt={3} sx={{ justifyContent: {xs: "center", md: "left"}}}>
             <MKTypography
               variant="h5"
               sx={{
