@@ -24,7 +24,7 @@ const Hero = () => {
         <MKTypography sx={{ typography: {xs: "h5", md: "h4"}}} marginTop={1.5} marginBottom={2.5}>
           I build beautiful websites and apps for businesses around the globe.
         </MKTypography>
-        <ButtonMp title="RESUME" linkRef="https://drive.google.com/file/d/1FiO63IWTp7uHdoRGNuUHjRsbYfTreWIo/view?usp=share_link" />
+        <ButtonMp title="RESUME" linkRef="https://drive.google.com/file/d/1zRi-f73-VKO72HJxXf5MrKyvbcGfYhUU/view?usp=sharing" />
       </Grid>
       <div style={{ display: "flex", justifyContent: "space-between" }}>
         <div />
