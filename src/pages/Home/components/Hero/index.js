@@ -19,7 +19,7 @@ const Hero = () => {
         }}
       >
         <MKTypography sx={{ typography: {xs: "h3", md: "h1"}}}>
-          Hi, I´m Mateo, <br /> Front End Developer
+          Hi, I´m Mateo, <br /> Software Developer
         </MKTypography>
         <MKTypography sx={{ typography: {xs: "h5", md: "h4"}}} marginTop={1.5} marginBottom={2.5}>
           I build beautiful websites and apps for businesses around the globe.
