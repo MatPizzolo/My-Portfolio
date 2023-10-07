@@ -3,7 +3,7 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import MKButton from "components/MKButton";
 import { Box } from "@mui/material";
 
-function ButtonMp({ linkRef, title }) {
+function ButtonMp({ linkRef, title, darkMode }) {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
 
@@ -14,6 +14,19 @@ function ButtonMp({ linkRef, title }) {
     position: "absolute",
     top: isSmallScreen ? 10 : 5,
     left: isSmallScreen ? 15 : 25,
+    background: darkMode ? "black" : "#DDDDE3",
+    borderColor: darkMode ? "white !important" : "black", 
+  };
+
+  const buttonStyle2 = {
+    background: 'linear-gradient(to right, purple, orange)',
+    width: "200px",
+    height: "60px",
+    border: "2px solid black",
+    position: "absolute",
+    top: isSmallScreen ? 10 : 5,
+    left: isSmallScreen ? 15 : 25,
+    color: "white !important"
   };
 
   return (
@@ -25,8 +38,12 @@ function ButtonMp({ linkRef, title }) {
       }}
     >
       <MKButton
-        sx={{ ...buttonStyle }}
-        color="black"
+        sx={{ ...buttonStyle2,
+          '&:hover': {
+            background: 'linear-gradient(to right, orange, purple)', // Adjust hover gradient
+          },
+          borderColor: darkMode ? "white !important" : "black",
+        }}
         href={linkRef}
         target="_blank"
       >
@@ -37,10 +54,9 @@ function ButtonMp({ linkRef, title }) {
           ...buttonStyle,
           position: "static",
           marginTop: "20px",
-          backgroundColor: "#EAECF9",
           "&:hover": {
-            backgroundColor: "#EAECF9",
-            cursor: "auto"
+            cursor: "auto",
+            backgroundColor: darkMode ? "black" : "#DDDDE3",
           },
         }}
       />

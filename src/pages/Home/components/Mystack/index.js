@@ -34,13 +34,13 @@ const MyStack = () => {
   return (
     <MKBox
       textAlign="center"
-      mt={20}
+      pt={20}
       marginRight="auto"
       marginLeft="auto"
       sx={{ maxWidth: { xs: "100%", md: "90%", lg: "750px" } }}
     >
       <MKTypography my={5} variant="h2">
-        FE Technologies and Skills
+        FUll Stack Technologies and Skills
       </MKTypography>
       <MKBox
         display="flex"

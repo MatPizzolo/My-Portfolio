@@ -2,33 +2,88 @@ import MKTypography from "components/MKTypography";
 import React from "react";
 import MKBox from "components/MKBox";
 import { Grid } from "@mui/material";
+import Navbar from "commons/Navbar";
 
-const Footer = () => {
+import { makeStyles } from "@mui/styles";
+import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
+
+const useStyles = makeStyles((theme) => ({
+  gradientText: {
+    background: "-webkit-linear-gradient(0deg, purple, orange)",
+    WebkitBackgroundClip: "text",
+    color: "transparent",
+    display: "inline",
+  },
+  gradientArrow: {
+    color: "linear-gradient(to right, purple, orange) !important",
+    WebkitBackgroundClip: "text",
+    // color: "transparent",
+    display: "inline",
+  },
+}));
+
+const Footer = ({ darkMode }) => {
+  const classes = useStyles();
+
+  const handleClick = () => {
+    const mailtoLink = `mailto:matpizzolo@gmail.com`;
+    window.location.href = mailtoLink;
+  };
+
   return (
     <>
-      <MKBox
-        bgColor="#EAECF9"
-        margin={2}
+      <Grid
+        container
         display="flex"
         justifyContent="space-between"
-        marginTop={20}
+        paddingTop={20}
         sx={{
-          padding: { xs: "2rem", md: "5rem" },
           flexDirection: { xs: "column", md: "row" },
-          textAlign: {xs: "center", md: "left"},
+          background: darkMode ? "#161513" : "#DDDDE3",
         }}
       >
-        <MKTypography variant="h2" sx={{ width: { xs: "100%", md: "50%" } }}>
-          Want to work?
-        </MKTypography>
-        {/* <MKTypography variant="p">
-              All rights reserved
-            </MKTypography> */}
+        <Grid
+          item
+          xs={12}
+          md={6}
+          sx={{
+            color: darkMode ? "white !important" : "black",
+            textAlign: { xs: "center", md: "left" },
+          }}
+        >
+          <MKTypography variant="h3">Want to work?</MKTypography>
+        </Grid>
 
-        <MKTypography variant="h5" sx={{ width: { xs: "100%", md: "50%" }, marginTop: {xs: "2rem", md: 0} }}>
-          You can email me directly at
-          matpizzolo@gmail.com
-        </MKTypography>
+        <Grid
+          item
+          xs={12}
+          md={6}
+          sx={{ textAlign: { xs: "center", md: "end" } }}
+        >
+          <MKTypography
+            variant="h3"
+            sx={{
+              marginTop: { xs: "2rem", md: 0 },
+              cursor: "pointer",
+            }}
+            onClick={handleClick}
+          >
+            <span className={classes.gradientText}>Let's Work Together </span>
+            <ArrowOutwardIcon sx={{ color: "orange" }} />
+          </MKTypography>
+        </Grid>
+      </Grid>
+
+      <MKBox
+        sx={{
+          width: "100%",
+          height: "2px",
+          background: darkMode ? "white" : "black",
+        }}
+      />
+
+      <MKBox pb={4}>
+        <Navbar darkMode={darkMode}/>
       </MKBox>
     </>
   );

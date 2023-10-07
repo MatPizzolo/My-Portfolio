@@ -7,8 +7,10 @@ import { Link } from "react-router-dom";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import LightModeIcon from "@mui/icons-material/LightMode";
+import DarkModeIcon from "@mui/icons-material/DarkMode";
+import MKButton from "components/MKButton";
 
-const Navbar = () => {
+const Navbar = ({ darkMode, toggleDarkMode }) => {
   return (
     <Grid
       container
@@ -26,6 +28,7 @@ const Navbar = () => {
           }}
           component={Link}
           to="/"
+          color={darkMode ? "white" : "black"}
         >
           my work
         </MKTypography>
@@ -40,19 +43,55 @@ const Navbar = () => {
           get in touch
         </MKTypography> */}
       </Grid>
-      <Grid item display="flex">
-        <a target="_blank" href="https://github.com/MatPizzolo">
-          <GitHubIcon fontSize="medium" color="black" />
+      <Grid item display="flex" alignItems="center">
+        <a
+          target="_blank"
+          href="https://github.com/MatPizzolo"
+          style={{ display: "flex" }}
+        >
+          <GitHubIcon fontSize="medium" color={darkMode ? "white" : "black"} />
         </a>
-        <a target="_blank" href="https://www.linkedin.com/in/mateo-pizzolo">
+        <a
+          target="_blank"
+          href="https://www.linkedin.com/in/mateo-pizzolo"
+          style={{ display: "flex" }}
+        >
           <LinkedInIcon
             fontSize="medium"
-            color="black"
+            color={darkMode ? "white" : "black"}
             sx={{ marginLeft: 2 }}
           />
         </a>
-        {/* <div style={{backgroundColor: "black", height: "1rem", width: "1px", margin: "auto"}}/>
-        <LightModeIcon fontSize="medium" color="black" sx={{marginLeft: 2}}/> */}
+        <div
+          style={{
+            backgroundColor: darkMode ? "white" : "black",
+            height: "1rem",
+            width: "2px",
+            margin: "auto 15px",
+          }}
+        />
+        <button
+          onClick={toggleDarkMode}
+          style={{
+            background: "transparent",
+            border: "none",
+            display: "flex",
+          }}
+        >
+          {!darkMode ? (
+            <LightModeIcon
+              fontSize="medium"
+              color="black"
+              sx={{ cursor: "pointer" }}
+            />
+          ) : (
+            <DarkModeIcon
+              fontSize="medium"
+              color="white"
+              sx={{ cursor: "pointer" }}
+            />
+          )}
+        </button>
       </Grid>
     </Grid>
   );

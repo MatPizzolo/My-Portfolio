@@ -29,7 +29,7 @@ const { black } = colors;
 
 const baseProperties = {
   fontFamily: '"Mulish", sans-serif',
-  fontFamily2: '"Inter", sans-serif',
+  fontFamily2: '"Bai Jamjuree      ", sans-serif',
   fontWeightLighter: 100,
   fontWeightLight: 300,
   fontWeightRegular: 400,
@@ -79,14 +79,14 @@ const typography = {
 
   h2: {
     fontFamily: baseProperties.fontFamily2,
-    fontSize: pxToRem(36),
+    fontSize: pxToRem(46),
     lineHeight: 1.3,
     ...baseHeadingProperties,
   },
 
   h3: {
     fontFamily: baseProperties.fontFamily,
-    fontSize: pxToRem(30),
+    fontSize: pxToRem(36),
     lineHeight: 1.375,
     ...baseHeadingProperties,
   },
