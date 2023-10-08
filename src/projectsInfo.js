@@ -14,6 +14,7 @@ import img5 from "assets/imgs/ProjectScreens/projectTicTacToe.png";
 import img6 from "assets/imgs/ProjectScreens/projectCodeEditor.png";
 import cubGif from "assets/imgs/ProjectScreens/cub.gif";
 import limechatImg from "assets/imgs/ProjectScreens/limechat-chat.png"
+import inceptionImg from "assets/imgs/ProjectScreens/inception.png"
 
 import { Box } from "@mui/material";
 
@@ -27,6 +28,11 @@ const cBadge = "https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c
 const shellBadge = "https://img.shields.io/badge/shell_script-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white"
 const cplusplusBadge = "https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white"
 const nestjsBadge = "https://img.shields.io/badge/nestjs-%23E0234E.svg?style=for-the-badge&logo=nestjs&logoColor=white"
+const dockerBadge = "https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white"
+const wordpressBadge = "https://img.shields.io/badge/WordPress-%23117AC9.svg?style=for-the-badge&logo=WordPress&logoColor=white"
+const mariadbBagde = "https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=mariadb&logoColor=white"
+const nginxBadge = "https://img.shields.io/badge/nginx-%23009639.svg?style=for-the-badge&logo=nginx&logoColor=white"
+
 
 const BoxImg = ({image}) => {
   return (
@@ -44,7 +50,19 @@ export const projectsInfo = [
     tags: [<BoxImg image={cplusplusBadge}/>],
     tagsObj: [jsBadge, reactBadge, muiBadge, nestjsBadge],
     pageLink: null,
-    repoLink: "https://github.com/MatPizzolo/ft_irc",
+    repoLink: "-",
+    latestWork: true
+  },
+  {
+    route: "",
+    title: "Inception",
+    description: "",
+    image: null,
+    previewImage: inceptionImg,
+    tags: [<BoxImg image={cplusplusBadge}/>],
+    tagsObj: [dockerBadge, mariadbBagde, wordpressBadge, nginxBadge],
+    pageLink: null,
+    repoLink: "https://github.com/MatPizzolo/Inception",
     latestWork: true
   },
   {
