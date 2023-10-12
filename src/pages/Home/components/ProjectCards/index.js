@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Card from "@mui/material/Card";
-import { Grid } from "@mui/material";
+import { Grid, Box } from "@mui/material";
 import CardContent from "@mui/material/CardContent";
 import { makeStyles } from "@mui/styles";
 
@@ -10,6 +10,7 @@ import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 
 import { projectsInfo } from "projectsInfo";
 import useMediaQuery from '@mui/material/useMediaQuery';
+import {useTheme} from "@mui/material/styles";
 
 const ProjectCard = ({
   imageSrc,
@@ -28,9 +29,13 @@ const ProjectCard = ({
     borderRadius: "2rem",
     marginBottom: "5rem",
   };
-
+  
+  const theme = useTheme();
+  const isLG = useMediaQuery(theme.breakpoints.up("lg"));
+  const isNotMD = useMediaQuery(theme.breakpoints.down("md"));
+  
   return (
-    <Grid item xs={12} sm={6} lg={4}>
+    <Grid item xs={12} sm={6} xl={4}>
       <Card sx={cardStyles}>
         <MKBox
           component="img"
@@ -63,7 +68,7 @@ const ProjectCard = ({
           >
             <Grid
               item
-              xs={8}
+              xs={12}
               md={6}
               display="flex"
               flexDirection="column"
@@ -74,7 +79,7 @@ const ProjectCard = ({
                   color: darkMode && "white !important",
                 }}
               >
-                <MKTypography variant="h3" color="white !important">
+                <MKTypography variant={isLG ? "h3" : "h4"} color="white !important">
                   {title}
                 </MKTypography>
                 <MKTypography variant="h6" color="white !important">
@@ -141,13 +146,14 @@ const ProjectCard = ({
                   </MKBox>
                 )}
               </MKBox>
+            {isNotMD && <Box pt={4}/>}
             </Grid>
-            <Grid item xs={4} md={6}>
+            <Grid item xs={12} md={6}>
               <MKBox
                 display="flex"
-                flexDirection="column"
-                alignItems="flex-end"
-                gap="1rem 0"
+                flexDirection={isNotMD ? "row" : "column"}
+                alignItems={isNotMD ? "center" : "flex-end"}
+                gap={isNotMD ? "1rem" : "0.5rem 0"}
                 flexWrap="wrap"
               >
                 {tags.map((tag) => {

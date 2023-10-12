@@ -27,8 +27,8 @@ const Hero = ({ darkMode }) => {
   const theme = useTheme();
 
   const isXS = useMediaQuery(theme.breakpoints.down("xs"));
-  const isSM = useMediaQuery(theme.breakpoints.down("sm"));
   const isMD = useMediaQuery(theme.breakpoints.down("md"));
+  const isLG = useMediaQuery(theme.breakpoints.up("lg"));
 
   return (
     <>
@@ -55,7 +55,7 @@ const Hero = ({ darkMode }) => {
           <MKBox textAlign={{ xs: "center", md: "left" }}>
             {isMD ? (
               <Typography
-                typography="h2"
+                typography="h3"
                 sx={{
                   marginTop: 4,
                   color: darkMode ? "white !important" : "black",
@@ -67,14 +67,14 @@ const Hero = ({ darkMode }) => {
             ) : (
               <>
                 <Typography
-                  typography="h1"
+                  typography={isLG ? "h2" : "h3"}
                 >
                   <span className={classes.gradientText}>
                     Hello, I´m Mateo,
                   </span>
                 </Typography>
                 <Typography
-                  typography="h1"
+                  typography={isLG ? "h1" : "h3"}
                   sx={{
                     color: darkMode ? "white !important" : "black",
                   }}
@@ -83,19 +83,23 @@ const Hero = ({ darkMode }) => {
                 </Typography>
               </>
             )}
+            {isMD ?
+              <Box mt={5} />
+              :
+              <MKTypography
+                sx={{
+                  typography: { xs: "h5", md: "h4" },
+                  fontWeight: "400 !important",
+                  color: darkMode ? "white !important" : "black",
+                }}
+                marginTop={1.5}
+                marginBottom={2.5}
+              >
+                Learning Software Development at 42, Madrid. I build beautiful
+                websites and apps for businesses around the globe.
+              </MKTypography>
 
-            <MKTypography
-              sx={{
-                typography: { xs: "h5", md: "h4" },
-                fontWeight: "400 !important",
-                color: darkMode ? "white !important" : "black",
-              }}
-              marginTop={1.5}
-              marginBottom={2.5}
-            >
-              Learning Software Development at 42, Madrid. I build beautiful
-              websites and apps for businesses around the globe.
-            </MKTypography>
+            }
             <ButtonMp
               darkMode={darkMode}
               title="RESUME"

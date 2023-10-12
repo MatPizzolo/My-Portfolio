@@ -32,7 +32,11 @@ const dockerBadge = "https://img.shields.io/badge/docker-%230db7ed.svg?style=for
 const wordpressBadge = "https://img.shields.io/badge/WordPress-%23117AC9.svg?style=for-the-badge&logo=WordPress&logoColor=white"
 const mariadbBagde = "https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=mariadb&logoColor=white"
 const nginxBadge = "https://img.shields.io/badge/nginx-%23009639.svg?style=for-the-badge&logo=nginx&logoColor=white"
-
+const mongoBadge = "https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white"
+const reduxBadge = "https://img.shields.io/badge/redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white"
+const chatgptBadge = "https://img.shields.io/badge/chatGPT-74aa9c?style=for-the-badge&logo=openai&logoColor=white"
+const web3Badge = "https://img.shields.io/badge/web3.js-F16822?style=for-the-badge&logo=web3.js&logoColor=white"
+const solidityBadge = "https://img.shields.io/badge/Solidity-%23363636.svg?style=for-the-badge&logo=solidity&logoColor=white"
 
 const BoxImg = ({image}) => {
   return (
@@ -43,14 +47,26 @@ const BoxImg = ({image}) => {
 export const projectsInfo = [
   {
     route: "",
-    title: "Full Stack Project",
+    title: "Amazon Clone",
     description: "",
     image: null,
     previewImage: null,
     tags: [<BoxImg image={cplusplusBadge}/>],
-    tagsObj: [jsBadge, reactBadge, muiBadge, nestjsBadge],
+    tagsObj: [dockerBadge, mongoBadge, nestjsBadge, reactBadge, reduxBadge, muiBadge],
     pageLink: null,
     repoLink: "-",
+    latestWork: true
+  },
+  {
+    route: "",
+    title: "web3",
+    description: "web3 porject",
+    image: null,
+    previewImage: null,
+    tags: [<BoxImg image={cBadge}/>],
+    tagsObj: [solidityBadge, reactBadge, muiBadge, web3Badge],
+    pageLink: null,
+    repoLink: "",
     latestWork: true
   },
   {
@@ -72,21 +88,9 @@ export const projectsInfo = [
     image: null,
     previewImage: limechatImg,
     tags: [<BoxImg image={cplusplusBadge}/>],
-    tagsObj: [cplusplusBadge],
+    tagsObj: [cplusplusBadge, chatgptBadge],
     pageLink: null,
     repoLink: "https://github.com/MatPizzolo/ft_irc",
-    latestWork: true
-  },
-  {
-    route: "",
-    title: "Cub3D",
-    description: "A game where you can move inside a maze",
-    image: null,
-    previewImage: cubGif,
-    tags: [<BoxImg image={cBadge}/>],
-    tagsObj: [cBadge],
-    pageLink: null,
-    repoLink: "https://github.com/MatPizzolo/cub3d",
     latestWork: true
   },
   {
@@ -102,31 +106,21 @@ export const projectsInfo = [
     latestWork: true
   },
   {
-    route: "project-nio",
-    title: "Nio",
-    description: "A landing page for a restaurant",
-    image: niopageimg,
-    previewImage: img1,
-    tags: [<BoxImg image={jsBadge}/>, <BoxImg image={reactBadge} />, <BoxImg image={muiBadge}/>],
-    tagsObj: [jsBadge, reactBadge, muiBadge],
-    pageLink: "https://peppy-lollipop-508c19.netlify.app/",
-    repoLink: "https://github.com/MatPizzolo/Nio-Resto",
-  },
-  {
-    route: "project-sabujcha",
-    title: "Sabujcha",
-    description: "A landing page for a tea brand ecommerce",
-    image: sabujchapageimg,
-    previewImage: img2,
-    tags: [<BoxImg image={jsBadge}/>, <BoxImg image={reactBadge} />],
-    tagsObj: [jsBadge, reactBadge],
-    pageLink: "https://sabujcha-landing-ecom-mp.netlify.app",
-    repoLink: "https://github.com/MatPizzolo/sabujcha_landing"
+    route: "",
+    title: "Cub3D",
+    description: "A game where you can move inside a maze",
+    image: null,
+    previewImage: cubGif,
+    tags: [<BoxImg image={cBadge}/>],
+    tagsObj: [cBadge],
+    pageLink: null,
+    repoLink: "https://github.com/MatPizzolo/cub3d",
+    latestWork: true
   },
   {
     route: "project-simply",
     title: "Simply Recipes",
-    description: "A simple recipe searcher app",
+    description: "A recipe searcher app",
     image: simplypageimg,
     previewImage: img3,
     tags: [<BoxImg image={jsBadge}/>, <BoxImg image={reactBadge} />, <BoxImg image={gatsbyBadge} />],
@@ -146,16 +140,27 @@ export const projectsInfo = [
     repoLink: "https://github.com/MatPizzolo/netflix-clone",
   },
   {
-    route: "project-code-editor",
-    title: "Online Editor",
-    description: "A code editor with live preview",
-    image: codepageimg,
-    previewImage: img6,
-    tags: [<BoxImg image={jsBadge}/>],
-    tagsObj: [jsBadge],
-    pageLink: "https://mp-online-code-editor.netlify.app/",
-    repoLink: "https://github.com/MatPizzolo/Online-Code-Editor"
+    route: "project-nio",
+    title: "Nio",
+    description: "A landing page for a restaurant",
+    image: niopageimg,
+    previewImage: img1,
+    tags: [<BoxImg image={jsBadge}/>, <BoxImg image={reactBadge} />, <BoxImg image={muiBadge}/>],
+    tagsObj: [jsBadge, reactBadge, muiBadge],
+    pageLink: "https://peppy-lollipop-508c19.netlify.app/",
+    repoLink: "https://github.com/MatPizzolo/Nio-Resto",
   },
+  // {
+  //   route: "project-code-editor",
+  //   title: "Online Editor",
+  //   description: "A code editor with live preview",
+  //   image: codepageimg,
+  //   previewImage: img6,
+  //   tags: [<BoxImg image={jsBadge}/>],
+  //   tagsObj: [jsBadge],
+  //   pageLink: "https://mp-online-code-editor.netlify.app/",
+  //   repoLink: "https://github.com/MatPizzolo/Online-Code-Editor"
+  // },
   {
     route: "project-tic-tac-toe",
     title: "Tic Tac Toe",
