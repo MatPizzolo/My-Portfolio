@@ -1,17 +1,10 @@
 import React from "react";
 import { useState } from "react";
 
-import Box from "@mui/material/Box";
-import Grid from "@mui/material/Grid";
-
-import MKTypography from "components/MKTypography";
-import MKButton from "components/MKButton";
 import MKBox from "components/MKBox";
 import Navbar from "commons/Navbar";
 import Hero from "./components/Hero";
-import Project from "./components/Project";
 import Footer from "commons/Footer/Footer";
-import MyStack from "./components/Mystack";
 
 import Languages from "./components/Languages";
 
@@ -126,9 +119,10 @@ function Home() {
         }}
       >
         <ProjectCards darkMode={darkMode} />
+        <MKBox mt={12} />
         <Languages darkMode={darkMode} />
         {/* <MyStack /> */}
-        <Footer darkMode={darkMode} />
+        <Footer darkMode={darkMode} toggleDarkMode={toggleDarkMode}/>
       </MKBox>
     </>
   );

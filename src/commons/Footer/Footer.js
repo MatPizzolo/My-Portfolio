@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Footer = ({ darkMode }) => {
+const Footer = ({ darkMode, toggleDarkMode }) => {
   const classes = useStyles();
 
   const handleClick = () => {
@@ -83,7 +83,7 @@ const Footer = ({ darkMode }) => {
       />
 
       <MKBox pb={4}>
-        <Navbar darkMode={darkMode}/>
+        <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode}/>
       </MKBox>
     </>
   );

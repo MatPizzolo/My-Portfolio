@@ -4,7 +4,7 @@ import simplypageimg from "assets/imgs/WholePageScreenshot/simply-screenshot.png
 import niopageimg from "assets/imgs/WholePageScreenshot/nio-screenshot.png";
 import ticpageimg from "assets/imgs/WholePageScreenshot/tictactoe-screenshot.png";
 import codepageimg from "assets/imgs/WholePageScreenshot/codeeditor-screenshot.png";
-import bashLogo from "assets/imgs/languages/bash-logo.png"
+import bashLogo from "assets/imgs/tech-stack/bash.png"
 
 import img1 from "assets/imgs/ProjectScreens/projectNio.png";
 import img2 from "assets/imgs/ProjectScreens/projectSabujcha.png";
@@ -15,6 +15,7 @@ import img6 from "assets/imgs/ProjectScreens/projectCodeEditor.png";
 import cubGif from "assets/imgs/ProjectScreens/cub.gif";
 import limechatImg from "assets/imgs/ProjectScreens/limechat-chat.png"
 import inceptionImg from "assets/imgs/ProjectScreens/inception.png"
+import amazonImg from "assets/imgs/ProjectScreens/amazonClone.png"
 
 import { Box } from "@mui/material";
 
@@ -37,37 +38,54 @@ const reduxBadge = "https://img.shields.io/badge/redux-%23593d88.svg?style=for-t
 const chatgptBadge = "https://img.shields.io/badge/chatGPT-74aa9c?style=for-the-badge&logo=openai&logoColor=white"
 const web3Badge = "https://img.shields.io/badge/web3.js-F16822?style=for-the-badge&logo=web3.js&logoColor=white"
 const solidityBadge = "https://img.shields.io/badge/Solidity-%23363636.svg?style=for-the-badge&logo=solidity&logoColor=white"
+const rubyonrailsBadge = "https://img.shields.io/badge/rails-%23CC0000.svg?style=for-the-badge&logo=ruby-on-rails&logoColor=white"
+
 
 const BoxImg = ({image}) => {
   return (
     <Box component="img" src={image} />
   )
 }
-
+// ADD a rest api project / Trascendence as on going?
 export const projectsInfo = [
+  {
+    route: "",
+    title: "Ruby",
+    description: "",
+    image: null,
+    previewImage: img3,
+    tags: ["all", "web"],
+    tagsObj: [dockerBadge, mongoBadge, rubyonrailsBadge, reactBadge, muiBadge],
+    pageLink: null,
+    repoLink: "-",
+    latestWork: true,
+    tagTech: ["Docker", "MongoDB", "Ruby on Rails", "React", "Material-UI"],
+  },
   {
     route: "",
     title: "Amazon Clone",
     description: "",
     image: null,
-    previewImage: null,
-    tags: [<BoxImg image={cplusplusBadge}/>],
+    previewImage: amazonImg,
+    tags: ["all", "web"],
     tagsObj: [dockerBadge, mongoBadge, nestjsBadge, reactBadge, reduxBadge, muiBadge],
     pageLink: null,
-    repoLink: "-",
-    latestWork: true
+    repoLink: "https://github.com/MatPizzolo/Amazon-clone",
+    latestWork: true,
+    tagTech: ["Docker", "MongoDB", "NestJS", "React", "Redux", "Material-UI"],
   },
   {
     route: "",
     title: "web3",
-    description: "web3 porject",
+    description: "web3 project",
     image: null,
-    previewImage: null,
-    tags: [<BoxImg image={cBadge}/>],
+    previewImage: img3,
+    tags: ["all", "web"],
     tagsObj: [solidityBadge, reactBadge, muiBadge, web3Badge],
     pageLink: null,
     repoLink: "",
-    latestWork: true
+    latestWork: true,
+    tagTech: ["Solidity", "React", "Material-UI", "Web3"],
   },
   {
     route: "",
@@ -75,11 +93,12 @@ export const projectsInfo = [
     description: "",
     image: null,
     previewImage: inceptionImg,
-    tags: [<BoxImg image={cplusplusBadge}/>],
+    tags: ["all", "42"],
     tagsObj: [dockerBadge, mariadbBagde, wordpressBadge, nginxBadge],
     pageLink: null,
     repoLink: "https://github.com/MatPizzolo/Inception",
-    latestWork: true
+    latestWork: true,
+    tagTech: ["Docker", "MariaDB", "WordPress", "Nginx"],
   },
   {
     route: "",
@@ -87,11 +106,12 @@ export const projectsInfo = [
     description: "A IRC Server built with c++98",
     image: null,
     previewImage: limechatImg,
-    tags: [<BoxImg image={cplusplusBadge}/>],
+    tags: ["all", "42"],
     tagsObj: [cplusplusBadge, chatgptBadge],
     pageLink: null,
     repoLink: "https://github.com/MatPizzolo/ft_irc",
-    latestWork: true
+    latestWork: true,
+    tagTech: ["C++", "ChatGPT"],
   },
   {
     route: "",
@@ -99,11 +119,12 @@ export const projectsInfo = [
     description: "Recreating the bash",
     image: bashLogo,
     previewImage: bashLogo,
-    tags: [<BoxImg image={cBadge}/>, <BoxImg image={shellBadge}/>],
+    tags: ["all", "42"],
     tagsObj: [cBadge, shellBadge],
     pageLink: null,
     repoLink: "https://github.com/MatPizzolo/minishell",
-    latestWork: true
+    latestWork: true,
+    tagTech: ["C", "Shell"],
   },
   {
     route: "",
@@ -111,11 +132,12 @@ export const projectsInfo = [
     description: "A game where you can move inside a maze",
     image: null,
     previewImage: cubGif,
-    tags: [<BoxImg image={cBadge}/>],
+    tags: ["all", "42"],
     tagsObj: [cBadge],
     pageLink: null,
     repoLink: "https://github.com/MatPizzolo/cub3d",
-    latestWork: true
+    latestWork: true,
+    tagTech: ["C"],
   },
   {
     route: "project-simply",
@@ -123,10 +145,11 @@ export const projectsInfo = [
     description: "A recipe searcher app",
     image: simplypageimg,
     previewImage: img3,
-    tags: [<BoxImg image={jsBadge}/>, <BoxImg image={reactBadge} />, <BoxImg image={gatsbyBadge} />],
+    tags: ["all", "web"],
     tagsObj: [jsBadge, reactBadge, gatsbyBadge],
     pageLink: "https://mateopizzolo-simple-recipes.netlify.app",
     repoLink: "https://github.com/MatPizzolo/Simply-Recipes",
+    tagTech: ["JavaScript", "React", "Gatsby"],
   },
   {
     route: "project-netflix",
@@ -134,10 +157,11 @@ export const projectsInfo = [
     description: "A Netflix clone made with React",
     image: netflixpageimg,
     previewImage: img4,
-    tags: [<BoxImg image={jsBadge}/>, <BoxImg image={reactBadge} />],
+    tags: ["all", "web"],
     tagsObj: [jsBadge, reactBadge],
     pageLink: "https://netflix-clone-mp.netlify.app",
     repoLink: "https://github.com/MatPizzolo/netflix-clone",
+    tagTech: ["JavaScript", "React"],
   },
   {
     route: "project-nio",
@@ -145,32 +169,22 @@ export const projectsInfo = [
     description: "A landing page for a restaurant",
     image: niopageimg,
     previewImage: img1,
-    tags: [<BoxImg image={jsBadge}/>, <BoxImg image={reactBadge} />, <BoxImg image={muiBadge}/>],
+    tags: ["all", "web"],
     tagsObj: [jsBadge, reactBadge, muiBadge],
     pageLink: "https://peppy-lollipop-508c19.netlify.app/",
     repoLink: "https://github.com/MatPizzolo/Nio-Resto",
+    tagTech: ["JavaScript", "React", "Material-UI"],
   },
-  // {
-  //   route: "project-code-editor",
-  //   title: "Online Editor",
-  //   description: "A code editor with live preview",
-  //   image: codepageimg,
-  //   previewImage: img6,
-  //   tags: [<BoxImg image={jsBadge}/>],
-  //   tagsObj: [jsBadge],
-  //   pageLink: "https://mp-online-code-editor.netlify.app/",
-  //   repoLink: "https://github.com/MatPizzolo/Online-Code-Editor"
-  // },
   {
     route: "project-tic-tac-toe",
     title: "Tic Tac Toe",
     description: "A simple Tic Tac Toe game",
     image: ticpageimg,
     previewImage: img5,
-    tags: [<BoxImg image={jsBadge}/>],
+    tags: ["all", "web"],
     tagsObj: [jsBadge],
     pageLink: "https://mp-tictactoe.netlify.app/",
     repoLink: "https://github.com/MatPizzolo/Tic-Tac-Toe",
+    tagTech: ["JavaScript"],
   },
-  
 ];

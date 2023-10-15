@@ -54,6 +54,11 @@ export default {
     focus: "#8f93a9",
   },
 
+  myviolet: {
+    main: "#84047E",
+    focus: "#84047E"
+  },
+
   info: {
     main: "#1A73E8",
     focus: "#1662C4",
@@ -105,6 +110,11 @@ export default {
     secondary: {
       main: "#747b8a",
       state: "#495361",
+    },
+
+    myviolet: {
+      main: "#84047E",
+      state: "#84047E"
     },
 
     info: {
@@ -245,6 +255,7 @@ export default {
   coloredShadows: {
     primary: "#e91e62",
     secondary: "#110e0e",
+    myviolet: "#84047E",
     info: "#00bbd4",
     success: "#4caf4f",
     warning: "#ff9900",

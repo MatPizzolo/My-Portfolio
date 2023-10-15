@@ -85,7 +85,7 @@ import dialogContentText from "assets/theme/components/dialog/dialogContentText"
 import dialogActions from "assets/theme/components/dialog/dialogActions";
 import swiper from "assets/theme/components/swiper";
 
-export default createTheme({
+const theme = createTheme({
   breakpoints: { ...breakpoints },
   palette: { ...colors },
   typography: { ...typography },
@@ -158,3 +158,5 @@ export default createTheme({
     MuiDialogActions: { ...dialogActions },
   },
 });
+
+export default theme;

@@ -62,7 +62,7 @@ const Hero = ({ darkMode }) => {
                 }}
               >
                 <span className={classes.gradientText}>Hello, I´m Mateo, </span>
-                Software Developer based in Spain
+                Software Developer
               </Typography>
             ) : (
               <>
@@ -70,36 +70,21 @@ const Hero = ({ darkMode }) => {
                   typography={isLG ? "h2" : "h3"}
                 >
                   <span className={classes.gradientText}>
-                    Hello, I´m Mateo,
+                    Hello, I´m Mateo
                   </span>
                 </Typography>
                 <Typography
-                  typography={isLG ? "h1" : "h3"}
+                  typography={isLG ? "h2" : "h3"}
                   sx={{
                     color: darkMode ? "white !important" : "black",
+                    whiteSpace: "nowrap"
                   }}
                 >
-                  Software Developer based in Spain
+                  Software Developer
                 </Typography>
               </>
             )}
-            {isMD ?
-              <Box mt={5} />
-              :
-              <MKTypography
-                sx={{
-                  typography: { xs: "h5", md: "h4" },
-                  fontWeight: "400 !important",
-                  color: darkMode ? "white !important" : "black",
-                }}
-                marginTop={1.5}
-                marginBottom={2.5}
-              >
-                Learning Software Development at 42, Madrid. I build beautiful
-                websites and apps for businesses around the globe.
-              </MKTypography>
-
-            }
+            <Box mt={2} />
             <ButtonMp
               darkMode={darkMode}
               title="RESUME"
