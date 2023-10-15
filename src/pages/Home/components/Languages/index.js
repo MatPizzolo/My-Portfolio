@@ -9,14 +9,11 @@ const Languages = ({ darkMode }) => {
     <Typography
       variant="h3"
       mb={4}
-      sx={{
-        color: darkMode ? "white" : "black",
-      }}
+      color={darkMode ? "white !important" : "black"}
     >
       {text}
     </Typography>
   );
-
   return (
     <MKBox>
       <TypographyComponent text={"Technologies I master"} />

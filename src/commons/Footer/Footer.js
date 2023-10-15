@@ -47,11 +47,10 @@ const Footer = ({ darkMode, toggleDarkMode }) => {
           xs={12}
           md={6}
           sx={{
-            color: darkMode ? "white !important" : "black",
             textAlign: { xs: "center", md: "left" },
           }}
         >
-          <MKTypography variant="h3">Want to work?</MKTypography>
+          <MKTypography variant="h3" color={darkMode ? "white !important" : "black"}>Want to work?</MKTypography>
         </Grid>
 
         <Grid
@@ -83,7 +82,7 @@ const Footer = ({ darkMode, toggleDarkMode }) => {
       />
 
       <MKBox pb={4}>
-        <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode}/>
+        <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       </MKBox>
     </>
   );
