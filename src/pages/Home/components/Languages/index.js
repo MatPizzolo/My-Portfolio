@@ -7,15 +7,16 @@ import ImgInBox from "./components/ImgInBox/ImgInBox";
 const Languages = ({ darkMode }) => {
   const TypographyComponent = ({ text }) => (
     <Typography
-      variant="h3"
+      variant="h2"
       mb={4}
-      color={darkMode ? "white !important" : "black"}
-    >
+      color={darkMode ? "white !important" : "#344767"}
+      mt={16}
+      >
       {text}
     </Typography>
   );
   return (
-    <MKBox>
+    <MKBox textAlign="center">
       <TypographyComponent text={"Technologies I master"} />
       <ImgInBox data={masterTechData} />
       <MKBox mt={2}/>

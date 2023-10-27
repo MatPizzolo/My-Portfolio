@@ -76,7 +76,7 @@ const Hero = ({ darkMode }) => {
                 <Typography
                   typography={isLG ? "h2" : "h3"}
                   sx={{
-                    color: darkMode ? "white !important" : "black",
+                    color: darkMode ? "white !important" : "dark",
                     whiteSpace: "nowrap"
                   }}
                 >
@@ -106,7 +106,7 @@ const Hero = ({ darkMode }) => {
             src={mePng}
             height="80%"
             maxWidth="100%"
-            sx={{ objectFit: "contain" }}
+            sx={{ objectFit: "contain", borderRadius: "1.25rem" }}
           />
           {/* <MKAvatar src={mePng} sx={{ width: 350, height: 350, margin: "auto" }} /> */}
         </Grid>

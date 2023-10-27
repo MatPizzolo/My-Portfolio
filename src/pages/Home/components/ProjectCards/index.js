@@ -37,6 +37,10 @@ const ProjectCards = ({ darkMode }) => {
 		return tagMatch && techMatch;
 	  });
 
+	useEffect(() => {
+		setSelectedTech(null);
+	}, [selectedTag])
+
 	return (
 		<MKBox>
 			<Box display="flex" justifyContent="space-between">
@@ -48,7 +52,7 @@ const ProjectCards = ({ darkMode }) => {
 				>
 					<span className={classes.gradientText}>Selected Projects </span>
 				</MKTypography>
-				<TagSelector selectedTag={selectedTag} setSelectedTag={setSelectedTag} />
+				<TagSelector selectedTag={selectedTag} setSelectedTag={setSelectedTag} darkMode={darkMode}/>
 			</Box>
 			<Grid
 				container

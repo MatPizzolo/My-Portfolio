@@ -39,7 +39,7 @@ const Footer = ({ darkMode, toggleDarkMode }) => {
         paddingTop={20}
         sx={{
           flexDirection: { xs: "column", md: "row" },
-          background: darkMode ? "#161513" : "#DDDDE3",
+          background: darkMode ? "#090e15" : "#e2e3ee",
         }}
       >
         <Grid
@@ -50,7 +50,7 @@ const Footer = ({ darkMode, toggleDarkMode }) => {
             textAlign: { xs: "center", md: "left" },
           }}
         >
-          <MKTypography variant="h3" color={darkMode ? "white !important" : "black"}>Want to work?</MKTypography>
+          <MKTypography variant="h3" color={darkMode ? "white !important" : "#344767"}>Want to work?</MKTypography>
         </Grid>
 
         <Grid

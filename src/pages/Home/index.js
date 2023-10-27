@@ -49,7 +49,7 @@ function Home() {
       <MKBox
         sx={{
           padding: { xs: "0 1rem", sm: "0 2rem", md: "0 5rem" },
-          background: darkMode ? "#161513" : "#DDDDE3",
+          background: darkMode ? "#090e15" : "#e2e3ee",
         }}
       >
         <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
@@ -58,7 +58,7 @@ function Home() {
 
       <MKBox
         sx={{
-          background: darkMode ? "#161513" : "#DDDDE3",
+          background: darkMode ? "#090e15" : "#e2e3ee",
           paddingTop: {
             xs: "6rem",
             sm: "2rem",
@@ -101,7 +101,7 @@ function Home() {
 
       <MKBox
         sx={{
-          background: darkMode ? "#161513" : "#DDDDE3",
+          background: darkMode ? "#090e15" : "#e2e3ee",
           paddingBottom: {
             xs: "4rem",
             sm: "6rem",
@@ -115,7 +115,7 @@ function Home() {
       <MKBox
         sx={{
           padding: { xs: "0 1rem", sm: "0 2rem", md: "0 5rem" },
-          background: darkMode ? "#161513" : "#DDDDE3",
+          background: darkMode ? "#090e15" : "#e2e3ee",
         }}
       >
         <ProjectCards darkMode={darkMode} />

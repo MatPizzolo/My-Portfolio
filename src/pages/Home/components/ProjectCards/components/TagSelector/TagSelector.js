@@ -10,51 +10,69 @@ const useStyles = makeStyles((theme) => ({
 		color: "transparent",
 		display: "inline",
 	},
-	buttonGroup: {
+	darkModeButtonGroup: {
 		'& .MuiButton-outlined': {
-			borderColor: '#84047E', // Border color for outlined buttons
+			borderColor: '#7B4AE2', // Border color for outlined buttons
 		},
 	},
-	button: {
+	lightModeButtonGroup: {
+		'& .MuiButton-outlined': {
+			borderColor: '#A8B4FF', // Border color for outlined buttons
+		},
+	},
+	darkModeButton: {
 		color: 'black',
 		'&.MuiButton-contained': {
-			color: 'white',
-			backgroundColor: '#84047E',
+			color: 'black',
+			backgroundColor: 'rgba(123, 74, 226, 0.5)',
 		},
 		'&.MuiButton-outlined': {
 			color: 'grey',
+			borderColor: 'rgba(123, 74, 226, 0.5) ',
+		},
+	},
+
+	lightModeButton: {
+		color: 'black',
+		'&.MuiButton-contained': {
+			color: 'white',
+			backgroundColor: '#344767 !important',
+		},
+		'&.MuiButton-outlined': {
+			color: 'grey',
+			borderColor: '#344767 !important',
 		},
 	},
 }));
 
-const TagSelector = ({selectedTag, setSelectedTag}) => {
+const TagSelector = ({ selectedTag, setSelectedTag, darkMode }) => {
 	const classes = useStyles();
 
 	const handleTagSelect = (tag) => {
 		setSelectedTag(tag);
 	};
-	
+
 	return (
 		<Box mt={2}>
-			<ButtonGroup variant="outlined" color="myviolet" className={classes.buttonGroup}>
+			<ButtonGroup variant="outlined" color="myviolet" className={darkMode ? classes.darkModeButtonGroup : classes.lightModeButtonGroup}>
 				<Button
 					onClick={() => handleTagSelect("all")}
 					variant={selectedTag === "all" ? "contained" : "outlined"}
-					className={classes.button}
+					className={darkMode ? classes.darkModeButton : classes.lightModeButton}
 				>
 					All
 				</Button>
 				<Button
 					onClick={() => handleTagSelect("web")}
 					variant={selectedTag === "web" ? "contained" : "outlined"}
-					className={classes.button}
+					className={darkMode ? classes.darkModeButton : classes.lightModeButton}
 				>
 					Web
 				</Button>
 				<Button
 					onClick={() => handleTagSelect("42")}
 					variant={selectedTag === "42" ? "contained" : "outlined"}
-					className={classes.button}
+					className={darkMode ? classes.darkModeButton : classes.lightModeButton}
 				>
 					42
 				</Button>

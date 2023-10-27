@@ -23,14 +23,14 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
         <MKTypography
           variant="h5"
           sx={{
-            background: " linear-gradient(0, #A8B4FF 50%, transparent 50%)",
+            background: darkMode ? "none " : "linear-gradient(0, #A8B4FF 50%, transparent 50%)",
             cursor: "pointer",
+            color: darkMode ? "rgba(123, 74, 226, 0.75)" : "#344767",
           }}
           component={Link}
           to="/"
-          color={darkMode ? "white" : "black"}
         >
-          my work
+          My work
         </MKTypography>
         {/* <MKTypography
           variant="h5"
@@ -49,7 +49,8 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
           href="https://github.com/MatPizzolo"
           style={{ display: "flex" }}
         >
-          <GitHubIcon fontSize="medium" color={darkMode ? "white" : "black"} />
+          <GitHubIcon fontSize="medium"
+            sx={{ color: darkMode ? "#7B4AE2" : "#344767  !important" }} />
         </a>
         <a
           target="_blank"
@@ -58,13 +59,12 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
         >
           <LinkedInIcon
             fontSize="medium"
-            color={darkMode ? "white" : "black"}
-            sx={{ marginLeft: 2 }}
+            sx={{ marginLeft: 2, color: darkMode ? "#7B4AE2" : "#344767 !important" }}
           />
         </a>
         <div
           style={{
-            backgroundColor: darkMode ? "white" : "black",
+            backgroundColor: darkMode ? "#7B4AE2" : "#344767",
             height: "1rem",
             width: "2px",
             margin: "auto 15px",
@@ -79,16 +79,14 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
           }}
         >
           {!darkMode ? (
-            <LightModeIcon
-              fontSize="medium"
-              color="black"
-              sx={{ cursor: "pointer" }}
-            />
-          ) : (
             <DarkModeIcon
               fontSize="medium"
-              color="white"
-              sx={{ cursor: "pointer" }}
+              sx={{ cursor: "pointer", color: "#344767" }}
+            />
+          ) : (
+            <LightModeIcon
+              fontSize="medium"
+              sx={{ cursor: "pointer", color: "#7B4AE2" }}
             />
           )}
         </button>

@@ -6,7 +6,6 @@ import { Box } from "@mui/material";
 function ButtonMp({ linkRef, title, darkMode }) {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
-
   const buttonStyle = {
     width: "200px",
     height: "60px",
@@ -14,8 +13,12 @@ function ButtonMp({ linkRef, title, darkMode }) {
     position: "absolute",
     top: isSmallScreen ? 10 : 5,
     left: isSmallScreen ? 15 : 25,
-    background: darkMode ? "black" : "#DDDDE3",
-    borderColor: darkMode ? "white !important" : "black", 
+    background: darkMode ? "#090e15" : "#e2e3ee",
+    borderColor: darkMode ? "white !important" : "#1e293b", 
+    '&:hover': {
+      background: 'inherit',
+      color: 'inherit',
+    },
   };
 
   const buttonStyle2 = {
@@ -42,7 +45,7 @@ function ButtonMp({ linkRef, title, darkMode }) {
           '&:hover': {
             background: 'linear-gradient(to right, orange, purple)', // Adjust hover gradient
           },
-          borderColor: darkMode ? "white !important" : "black",
+          borderColor: darkMode ? "white !important" : "#1e293b",
         }}
         href={linkRef}
         target="_blank"
@@ -55,8 +58,8 @@ function ButtonMp({ linkRef, title, darkMode }) {
           position: "static",
           marginTop: "20px",
           "&:hover": {
-            cursor: "auto",
-            backgroundColor: darkMode ? "black" : "#DDDDE3",
+            cursor: "default",
+            backgroundColor: darkMode ? "#090e15" : "#e2e3ee",
           },
         }}
       />

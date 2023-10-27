@@ -56,10 +56,10 @@ export const masterTechData = [
       title: "Figma",
       imageUrl: gatsbyImage,  
     },
-    {
-      title: "Figma",
-      imageUrl: rubyrailsImage,  
-    },
+    // {
+    //   title: "Figma",
+    //   imageUrl: rubyrailsImage,  
+    // },
     {
       title: "Figma",
       imageUrl: nestjsImage,  
