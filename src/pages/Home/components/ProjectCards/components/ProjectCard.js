@@ -8,6 +8,7 @@ import MKTypography from "components/MKTypography";
 import { Grid, Box, Button } from "@mui/material";
 import useMediaQuery from '@mui/material/useMediaQuery';
 import MKBox from "components/MKBox";
+import {Tooltip} from "@mui/material";
 
 
 const ProjectCard = ({
@@ -80,12 +81,17 @@ const ProjectCard = ({
 						<MKTypography style={textColorChangeDarkMode} variant="h5" sx={{ fontWeight: 450 }}> {title} </MKTypography>
 						<div>
 							{pageLink &&
-							<a href={pageLink} target="_blank" style={{paddingRight: "10px"}}>
-								<WebIcon fontSize="medium" sx={{ color: darkMode ? "#7B4AE2" : "#344767  !important" }} />
-							</a>}
+								<Tooltip title="Visit Web Page" arrow>
+									<a href={pageLink} target="_blank" style={{ paddingRight: "10px" }}>
+										<WebIcon fontSize="medium" sx={{ color: darkMode ? "#7B4AE2" : "#344767  !important" }} />
+									</a>
+								</Tooltip>
+							}
+							<Tooltip title="Visit Repository" arrow>
 							<a href={repoLink} target="_blank">
 								<GitHubIcon fontSize="medium" sx={{ color: darkMode ? "#7B4AE2" : "#344767  !important" }} />
 							</a>
+							</Tooltip>
 						</div>
 					</Box>
 					<MKTypography style={textColorChangeDarkMode} variant="h6"> {description} </MKTypography>
