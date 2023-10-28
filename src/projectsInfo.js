@@ -5,6 +5,7 @@ import niopageimg from "assets/imgs/WholePageScreenshot/nio-screenshot.png";
 import ticpageimg from "assets/imgs/WholePageScreenshot/tictactoe-screenshot.png";
 import codepageimg from "assets/imgs/WholePageScreenshot/codeeditor-screenshot.png";
 import bashLogo from "assets/imgs/tech-stack/bash.png"
+import philoImg from "assets/imgs/WholePageScreenshot/philo-problem.png"
 
 import img1 from "assets/imgs/ProjectScreens/projectNio.png";
 import img2 from "assets/imgs/ProjectScreens/projectSabujcha.png";
@@ -62,26 +63,13 @@ export const projectsInfo = [
   //   tagTech: ["Docker", "MongoDB", "Ruby on Rails", "React", "Material-UI"],
   // },
   // {
-  //   route: "",
-  //   title: "Amazon Clone",
-  //   description: "",
-  //   image: null,
-  //   previewImage: amazonImg,
-  //   tags: ["all", "web"],
-  //   tagsObj: [dockerBadge, mongoBadge, nestjsBadge, reactBadge, reduxBadge, muiBadge],
-  //   pageLink: null,
-  //   repoLink: "https://github.com/MatPizzolo/Amazon-clone",
-  //   currentlyDoing: false,
-  //   tagTech: ["Docker", "MongoDB", "NestJS", "React", "Redux", "Material-UI"],
-  // },
-  // {
-  //   route: "",
-  //   title: "web3",
-  //   description: "web3 project",
-  //   image: null,
-  //   previewImage: img3,
-  //   tags: ["all", "web"],
-  //   tagsObj: [solidityBadge, reactBadge, muiBadge, web3Badge],
+    //   route: "",
+    //   title: "web3",
+    //   description: "web3 project",
+    //   image: null,
+    //   previewImage: img3,
+    //   tags: ["all", "web"],
+    //   tagsObj: [solidityBadge, reactBadge, muiBadge, web3Badge],
   //   pageLink: null,
   //   repoLink: "",
   //   currentlyDoing: false,
@@ -90,7 +78,7 @@ export const projectsInfo = [
   {
     route: "",
     title: "Inception",
-    description: "",
+    description: "Using Docker Compose to connect different containers",
     image: null,
     previewImage: inceptionImg,
     tags: ["all", "42"],
@@ -103,7 +91,7 @@ export const projectsInfo = [
   {
     route: "",
     title: "IRC Server",
-    description: "A IRC Server built with c++98",
+    description: "An Internet Relay Chat Server built with c++98, supporting all different clients. Using TCP/IP connections",
     image: null,
     previewImage: limechatImg,
     tags: ["all", "42"],
@@ -116,7 +104,7 @@ export const projectsInfo = [
   {
     route: "",
     title: "Minishell",
-    description: "Recreating the bash",
+    description: "42 project aiming to recreating the bash",
     image: bashLogo,
     previewImage: bashLogo,
     tags: ["all", "42"],
@@ -129,7 +117,7 @@ export const projectsInfo = [
   {
     route: "",
     title: "Cub3D",
-    description: "A game where you can move inside a maze",
+    description: "A 3D game made with 42 C graphic library Minilibx, where you can move inside a maze",
     image: null,
     previewImage: cubGif,
     tags: ["all", "42"],
@@ -142,7 +130,7 @@ export const projectsInfo = [
   {
     route: "project-simply",
     title: "Simply Recipes",
-    description: "A recipe searcher app",
+    description: "A recipe searcher app, showing Gatsby`s speed",
     image: simplypageimg,
     previewImage: img3,
     tags: ["all", "web"],
@@ -151,6 +139,19 @@ export const projectsInfo = [
     repoLink: "https://github.com/MatPizzolo/Simply-Recipes",
     currentlyDoing: false,
     tagTech: ["JavaScript", "React", "Gatsby"],
+  },
+  {
+    route: "",
+    title: "Amazon Clone",
+    description: "",
+    image: null,
+    previewImage: amazonImg,
+    tags: ["all", "web"],
+    tagsObj: [dockerBadge, mongoBadge, nestjsBadge, reactBadge, reduxBadge, muiBadge],
+    pageLink: null,
+    repoLink: "https://github.com/MatPizzolo/Amazon-clone",
+    currentlyDoing: false,
+    tagTech: ["Docker", "MongoDB", "NestJS", "React", "Redux", "Material-UI"],
   },
   {
     route: "project-netflix",
@@ -181,7 +182,7 @@ export const projectsInfo = [
   {
     route: "project-tic-tac-toe",
     title: "Tic Tac Toe",
-    description: "A simple Tic Tac Toe game",
+    description: "An online 2 player simple Tic Tac Toe game",
     image: ticpageimg,
     previewImage: img5,
     tags: ["all", "web"],
@@ -190,5 +191,18 @@ export const projectsInfo = [
     repoLink: "https://github.com/MatPizzolo/Tic-Tac-Toe",
     currentlyDoing: false,
     tagTech: ["JavaScript"],
+  },
+  {
+    route: null,
+    title: "Philosophers",
+    description: "Solving the dining philosophers problem in C learning about threads and mutexes",
+    image: philoImg,
+    previewImage: philoImg,
+    tags: ["all", "42"],
+    tagsObj: [cBadge],
+    pageLink: null,
+    repoLink: "https://github.com/MatPizzolo/philosophers",
+    currentlyDoing: false,
+    tagTech: ["C"],
   },
 ];

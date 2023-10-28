@@ -3,6 +3,7 @@ import CardContent from "@mui/material/CardContent";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import { useTheme } from "@mui/material/styles";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import WebIcon from '@mui/icons-material/Web';
 import MKTypography from "components/MKTypography";
 import { Grid, Box, Button } from "@mui/material";
 import useMediaQuery from '@mui/material/useMediaQuery';
@@ -77,9 +78,15 @@ const ProjectCard = ({
 				<Box m="1rem" >
 					<Box display="flex" justifyContent="space-between">
 						<MKTypography style={textColorChangeDarkMode} variant="h5" sx={{ fontWeight: 450 }}> {title} </MKTypography>
-						<a href={repoLink} target="_blank">
-							<GitHubIcon fontSize="medium" sx={{ color: darkMode ? "#7B4AE2" : "#344767  !important" }} />
-						</a>
+						<div>
+							{pageLink &&
+							<a href={pageLink} target="_blank" style={{paddingRight: "10px"}}>
+								<WebIcon fontSize="medium" sx={{ color: darkMode ? "#7B4AE2" : "#344767  !important" }} />
+							</a>}
+							<a href={repoLink} target="_blank">
+								<GitHubIcon fontSize="medium" sx={{ color: darkMode ? "#7B4AE2" : "#344767  !important" }} />
+							</a>
+						</div>
 					</Box>
 					<MKTypography style={textColorChangeDarkMode} variant="h6"> {description} </MKTypography>
 					<Box display="flex" width="100%" flexWrap="wrap" gap={1} mt={4} mb={2}>

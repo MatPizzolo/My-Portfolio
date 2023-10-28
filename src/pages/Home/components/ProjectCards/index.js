@@ -73,7 +73,7 @@ const ProjectCards = ({ darkMode }) => {
 							description={project.description}
 							imageSrc={project.previewImage}
 							repoLink={project.repoLink}
-							// pageLink={project.pageLink}
+							pageLink={project.pageLink}
 							darkMode={darkMode}
 							tags={project.tagTech}
 							selectedTech={selectedTech}
