@@ -14,7 +14,7 @@ import lgBanner from "assets/imgs/banner-ddd/lg.png";
 import lgBannerDark from "assets/imgs/banner-ddd/lg-dark.png";
 import smBanner from "assets/imgs/banner-ddd/sm.png";
 import smBannerDark from "assets/imgs/banner-ddd/sm-dark.png";
-import xsBanner from "assets/imgs/banner-ddd/xs.png";
+import xsBanner from "assets/imgs/banner-ddd/xs1.png";
 import xsBannerDark from "assets/imgs/banner-ddd/xs-dark.png";
 
 import { useMediaQuery } from "@mui/material";
@@ -27,17 +27,17 @@ function Home() {
     console.log("changing dark mode: ", darkMode);
   };
 
-  const isXsBreakpoint = useMediaQuery((theme) => theme.breakpoints.down("xs"));
-  const isSmBreakpoint = useMediaQuery((theme) =>
-    theme.breakpoints.between("sm", "md")
+  const isXsSmBreakpoint = useMediaQuery((theme) => theme.breakpoints.down("sm"));
+  const isMdBreakpoint = useMediaQuery((theme) =>
+    theme.breakpoints.down("md")
   );
-  const isMdBreakpoint = useMediaQuery((theme) => theme.breakpoints.up("md"));
+  const isMoreMdBreakpoint = useMediaQuery((theme) => theme.breakpoints.up("md"));
 
   let imgSrc = "";
 
-  if (isXsBreakpoint) {
+  if (isXsSmBreakpoint) {
     imgSrc = darkMode ? xsBannerDark : xsBanner;
-  } else if (isSmBreakpoint) {
+  } else if (isMdBreakpoint) {
     imgSrc = darkMode ? smBannerDark : smBanner;
   } else {
     // Default for lg or larger
@@ -60,7 +60,7 @@ function Home() {
         sx={{
           background: darkMode ? "#090e15" : "#e2e3ee",
           paddingTop: {
-            xs: "6rem",
+            xs: "4rem",
             sm: "2rem",
             md: "5rem",
             lg: "0rem",

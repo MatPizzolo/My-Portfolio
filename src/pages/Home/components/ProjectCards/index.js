@@ -23,6 +23,7 @@ const ProjectCards = ({ darkMode }) => {
 	const classes = useStyles();
 	const isMdBreakpoint = useMediaQuery((theme) => theme.breakpoints.up('md'));
 	const typographyVariant = isMdBreakpoint ? 'h2' : 'h3';
+	
 	const [selectedTag, setSelectedTag] = useState("all");
 	const [selectedTech, setSelectedTech] = useState(null);
 
@@ -30,12 +31,12 @@ const ProjectCards = ({ darkMode }) => {
 		const tagMatch = project.tags.includes(selectedTag);
 		let techMatch = false;
 		if (selectedTech !== null) {
-		  techMatch = project.tagTech.includes(selectedTech) && tagMatch;
+			techMatch = project.tagTech.includes(selectedTech) && tagMatch;
 		} else {
 			techMatch = true;
 		}
 		return tagMatch && techMatch;
-	  });
+	});
 
 	useEffect(() => {
 		setSelectedTech(null);
@@ -43,17 +44,21 @@ const ProjectCards = ({ darkMode }) => {
 
 	return (
 		<MKBox>
-			<Box display="flex" justifyContent="space-between">
-				<MKTypography
-					variant={typographyVariant}
-					sx={{
-						color: darkMode ? "white !important" : "black",
-					}}
-				>
-					<span className={classes.gradientText}>Selected Projects </span>
-				</MKTypography>
-				<TagSelector selectedTag={selectedTag} setSelectedTag={setSelectedTag} darkMode={darkMode}/>
-			</Box>
+			<Grid container>
+				<Grid item xs={8}>
+					<MKTypography
+						variant={typographyVariant}
+						sx={{
+							color: darkMode ? "white !important" : "black",
+						}}
+					>
+						<span className={classes.gradientText}>Selected Projects </span>
+					</MKTypography>
+				</Grid>
+				<Grid item xs={4} container justifyContent="flex-end" alignItems="center">
+					<TagSelector selectedTag={selectedTag} setSelectedTag={setSelectedTag} darkMode={darkMode} />
+				</Grid>
+			</Grid>
 			<Grid
 				container
 				spacing={{ xs: 4, md: 6, lg: 10 }}

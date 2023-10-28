@@ -1,6 +1,7 @@
 import React from 'react'
 import { Box, Button, ButtonGroup } from '@mui/material'
 import { makeStyles } from "@mui/styles";
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -11,11 +12,14 @@ const useStyles = makeStyles((theme) => ({
 		display: "inline",
 	},
 	darkModeButtonGroup: {
+		maxWidth: "100%",
 		'& .MuiButton-outlined': {
 			borderColor: '#7B4AE2', // Border color for outlined buttons
 		},
+
 	},
 	lightModeButtonGroup: {
+		maxWidth: "100%",
 		'& .MuiButton-outlined': {
 			borderColor: '#A8B4FF', // Border color for outlined buttons
 		},
@@ -52,31 +56,37 @@ const TagSelector = ({ selectedTag, setSelectedTag, darkMode }) => {
 		setSelectedTag(tag);
 	};
 
+	const isMdBreakpoint = useMediaQuery((theme) => theme.breakpoints.down('md'));
+
+
 	return (
-		<Box mt={2}>
-			<ButtonGroup variant="outlined" color="myviolet" className={darkMode ? classes.darkModeButtonGroup : classes.lightModeButtonGroup}>
-				<Button
-					onClick={() => handleTagSelect("all")}
-					variant={selectedTag === "all" ? "contained" : "outlined"}
-					className={darkMode ? classes.darkModeButton : classes.lightModeButton}
-				>
-					All
-				</Button>
-				<Button
-					onClick={() => handleTagSelect("web")}
-					variant={selectedTag === "web" ? "contained" : "outlined"}
-					className={darkMode ? classes.darkModeButton : classes.lightModeButton}
-				>
-					Web
-				</Button>
-				<Button
-					onClick={() => handleTagSelect("42")}
-					variant={selectedTag === "42" ? "contained" : "outlined"}
-					className={darkMode ? classes.darkModeButton : classes.lightModeButton}
-				>
-					42
-				</Button>
-			</ButtonGroup>
+		<Box  >
+			<Box sx={{ maxWidth: '100%', wordWrap: 'break-word' }}>
+				<ButtonGroup variant="outlined" color="myviolet" className={darkMode ? classes.darkModeButtonGroup : classes.lightModeButtonGroup}
+					size={isMdBreakpoint ?  "small" : "large"}>
+					<Button
+						onClick={() => handleTagSelect("all")}
+						variant={selectedTag === "all" ? "contained" : "outlined"}
+						className={darkMode ? classes.darkModeButton : classes.lightModeButton}
+					>
+						All
+					</Button>
+					<Button
+						onClick={() => handleTagSelect("web")}
+						variant={selectedTag === "web" ? "contained" : "outlined"}
+						className={darkMode ? classes.darkModeButton : classes.lightModeButton}
+					>
+						Web
+					</Button>
+					<Button
+						onClick={() => handleTagSelect("42")}
+						variant={selectedTag === "42" ? "contained" : "outlined"}
+						className={darkMode ? classes.darkModeButton : classes.lightModeButton}
+					>
+						42
+					</Button>
+				</ButtonGroup>
+			</Box>
 		</Box>
 	)
 }

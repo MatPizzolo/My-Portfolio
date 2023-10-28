@@ -32,7 +32,7 @@ const Hero = ({ darkMode }) => {
 
   return (
     <>
-      <Grid container justifyContent="center" alignItems="center" height="80vh">
+      <Grid container justifyContent="center" alignItems="center" height="75vh">
         <Grid
           item
           xs={12} // Use the entire width on small screens
@@ -40,11 +40,11 @@ const Hero = ({ darkMode }) => {
           justifyContent="center" // Horizontally center the avatar
           alignItems="center" // Vertically center the avatar
           display={{ xs: "block", md: "none" }}
-          mt={12}
+          mt={6}
         >
           <MKAvatar
             src={mePng}
-            sx={{ width: "35%", height: "35%", margin: "auto" }}
+            sx={{ width: "60%", height: "60%", margin: "auto" }}
           />
         </Grid>
         <Grid
@@ -57,7 +57,6 @@ const Hero = ({ darkMode }) => {
               <Typography
                 typography="h3"
                 sx={{
-                  marginTop: 4,
                   color: darkMode ? "white !important" : "black",
                 }}
               >
