@@ -78,7 +78,7 @@ export const projectsInfo = [
   {
     route: "",
     title: "Inception",
-    description: "Using Docker Compose to connect different containers",
+    description: "A dockerized modular system managed by docker-compose, encompassing a robust LEMP Stack (Nginx, MariaDB, PHP) configuration to efficiently deploy WordPress",
     image: null,
     previewImage: inceptionImg,
     tags: ["all", "42"],
@@ -91,7 +91,7 @@ export const projectsInfo = [
   {
     route: "",
     title: "IRC Server",
-    description: "An Internet Relay Chat Server built with c++98, supporting all different clients. Using TCP/IP connections",
+    description: "An IRC (Internet Relay Chat) server, developed entirely in C++98. It is designed to support all types of clients, through TCP/IP connections.",
     image: null,
     previewImage: limechatImg,
     tags: ["all", "42"],
@@ -104,7 +104,7 @@ export const projectsInfo = [
   {
     route: "",
     title: "Minishell",
-    description: "42 project aiming to recreating the bash",
+    description: "As beutiful as a shell. This program tries to recreate/replicate the bash.",
     image: bashLogo,
     previewImage: bashLogo,
     tags: ["all", "42"],
@@ -143,7 +143,7 @@ export const projectsInfo = [
   {
     route: "",
     title: "Amazon Clone",
-    description: "",
+    description: "A Full Stack Amazon Clone application that incorporates JWT for user authentication and offers a cart for product selection",
     image: null,
     previewImage: amazonImg,
     tags: ["all", "web"],
@@ -195,7 +195,7 @@ export const projectsInfo = [
   {
     route: null,
     title: "Philosophers",
-    description: "Solving the dining philosophers problem in C learning about threads and mutexes",
+    description: "Solving the Dining Philosopher problem dealing with deadlock and race conditions in multithreaded applications.",
     image: philoImg,
     previewImage: philoImg,
     tags: ["all", "42"],
