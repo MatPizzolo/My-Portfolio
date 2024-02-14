@@ -13,6 +13,7 @@ import img3 from "assets/imgs/ProjectScreens/projectSimply.png";
 import img4 from "assets/imgs/ProjectScreens/projectNetflix.png";
 import img5 from "assets/imgs/ProjectScreens/projectTicTacToe.png";
 import img6 from "assets/imgs/ProjectScreens/projectCodeEditor.png";
+import img7 from "assets/imgs/ProjectScreens/projectTrascend.png";
 import cubGif from "assets/imgs/ProjectScreens/cub.gif";
 import limechatImg from "assets/imgs/ProjectScreens/limechat-chat.png"
 import inceptionImg from "assets/imgs/ProjectScreens/inception.png"
@@ -47,21 +48,22 @@ const BoxImg = ({image}) => {
     <Box component="img" src={image} />
   )
 }
-// ADD a rest api project / Trascendence as on going?
+
+
 export const projectsInfo = [
-  // {
-  //   route: "",
-  //   title: "Trascendence",
-  //   description: "",
-  //   image: null,
-  //   previewImage: img3,
-  //   tags: ["all", "42"],
-  //   tagsObj: [dockerBadge, mongoBadge, rubyonrailsBadge, reactBadge, muiBadge],
-  //   pageLink: null,
-  //   repoLink: "-",
-  //   currentlyDoing: true,
-  //   tagTech: ["Docker", "MongoDB", "Ruby on Rails", "React", "Material-UI"],
-  // },
+  {
+    route: "",
+    title: "Trascendence",
+    description: "A web app where users can play Pong online, create tournaments, add friends...",
+    image: null,
+    previewImage: img7,
+    tags: ["all", "42"],
+    tagsObj: [dockerBadge, jsBadge,],
+    pageLink: null,
+    repoLink: "https://github.com/MatPizzolo/ft_transcendence/",
+    currentlyDoing: true,
+    tagTech: ["Docker", "javascript", "Bootstrap", "Django"],
+  },
   // {
     //   route: "",
     //   title: "web3",
